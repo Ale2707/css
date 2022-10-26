@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9c790076ba.js" crossorigin="anonymous"></script>
+    
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles2.css">
+    <script type="text/javascript">
+      function login(){
+        var user, pass;
+        user=document.getElementById("usuario").value;
+        pass=document.getElementById("contraseña").value;
+    
+        if(user=="Alejandro"||"Jhorel"&& pass=="1234")
+        {
+            alert("Bienvenido a tu Tienda Online"+" "+user)
+            
+            
+        }
+        else{
+            alert("Datos Incorrectos")}
+    }
+</script>
+<script type="text/javascript">
+    function convertir(){
+    var valor=parseFloat(document.getElementById("cantidad").value);
+    var dolar=6.96;
+    var euro=6.88;
+    var cdolar=1.0036;
+    var ceuro=0.9965;
+    var resultado=0;
+    de=document.getElementById("de").value;
+    a=document.getElementById("a").value;
+    
+//bolivianos a dolar
+    if(de==3&&a==1)
+    {
+        resultado=valor/dolar;
+    }
+    else if(de==3&&a==2)
+    {
+        resultado=valor/euro;
+    }
+    else if(de==1 && a==3)
+    {
+        resultado=valor*dolar;
+    }
+    else if(de==2 && a==3)
+    {
+        resultado=valor*euro;
+    }
+    else if(de==1 && a==2)
+    {
+        resultado=valor*ceuro;
+    }
+    else if(de==2 && a==1)
+    {
+        resultado=valor*cdolar;
+        
+    }
+    btnconvertor.innerHTML=resultado.toFixed(2);
+
+}
+</script>
+</head>
+
+<body>
+    <div class="padre">
+        <header class="header"> 
+            <div class="menu">
+                <div class="logo">
+                    Comodin
+                </div>
+                
+                <nav>
+                    <a href=""><i class="fa-solid fa-house"></i>Inicio</a>
+                    <a href=""><i class="fa-sharp fa-solid fa-people-group"></i>Sobre nosotros</a>
+                    <a href=""><i class="fa-sharp fa-solid fa-box-archive"></i>Galeria</a>
+                    <a href=""><i class="fa-sharp fa-solid fa-mobile-retro"></i>Contacto</a>
+                </nav> 
+
+                <div class="social">
+                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                </div>     
+
+            </div>
+            <div class="imagen0">
+                <img src="img/OP2.gif" class="imgprincipal" alt="">
+            </div>
+            <div class="texto-principal">
+                
+            </div>
+            
+        </header>
+        
+        <section class="section">
+            <div class="ladoA">
+                <div class="imagen">
+                    <img src="img/banner-black-oct-web.gif" class="imgarticulo" alt="">
+                    
+                </div>
+                <div class="sesion">
+                    <form action="">
+                    <h2 class="h2sesion">Inicio de Sesion</h2>
+                    <i class="fa-solid fa-user-tie"></i><input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                    <br>
+                    <br>
+                    <i class="fa-solid fa-lock"></i></i><input type="password" name="contraseña" id="contraseña" placeholder="contraseña">
+                    <br><br/>
+                    <input type="button" value="Iniciar sesion" id="boton" onclick="login()">
+                </form>
+                </div>
+                <div class="foto">
+                    <img src="img/log2.png" class="imglog" alt="">
+                    <br>
+                    <h1>
+                        <script>user</script>
+                    </h1>
+                    
+                </div>
+                <div class="info1">
+                    <h3>Productos De Calidad Global Con El Sello "Made in Bolivia"</h3>
+                    <br>
+Todas nuestras piezas cuidadosamente fabricadas por costureras y artesanos locales bajo un estricto control de calidad, creemos en la sostenibilidad y en trabajar con personas que ponen su amor y pasión en lo que hacen. 
+                </div>
+                <div class="convertor">
+                    <h3 class="h3convertor">Conversor de divisas</h3>
+                    <br>
+                    Cantidad: <input type="text" id="cantidad" value="0" onhange="convertir()"><br>
+                    Convertir de
+             
+                    <Select id="de" onhange="convertir()">
+                        <option value="1">Dolares</option>
+                        <option value="2">Euros</option>
+                        <option value="3">Bolivianos</option>
+                    </Select><br>
+                    A:
+                    <Select id="a" onhange="convertir()">
+                        <option value="1">Dolares</option>
+                        <option value="2">Euros</option>
+                        <option value="3">Bolivianos</option>
+                        
+                    </Select>
+                    <br>
+                    <button id="btnconvertidor" onclick="convertir()">Convertir</button>
+                    <br>
+                    <label for="" id="btnconvertor">$0.00</label>
+                    
+                </div>
+                <div class="info2">
+                    <h3>
+                        LAS ÚLTIMAS TENDENCIAS EN MODA
+                    </h3>
+                    <br>
+En COMODIN ponemos a tu disposición las tendencias más rompedoras en moda ya que somos una marca de ropa de mujer que se preocupa por innovar y ajustarse rápidamente a las modas actuales. Es por ello que todas las semanas incorporamos novedades a nuestra tienda online. Asimismo, cada semana lanzamos nuevas ofertas que te permiten comprar prendas y complementos rebajados.
+                   </div>
+            </div>
+            <aside class="aside">
+                <div class="enlace1">
+                    <a href=""><i class="fa-brands fa-tiktok"></i>www.Instagram.com</a>
+                   
+                </div>
+                <div class="enlace2">
+                    <a href=""><i class="fa-brands fa-instagram"></i>www.TikTok</a>
+                    
+                </div>
+                <br><br>
+                <div class="info3">
+                    <h3>NUESTRA HISTORIA</h3>
+                    <br>
+                    Hola, bienvenido a Tiendas Comodin!
+                    En el shop de comodin hacemos productos para tu vida; aquí vas a encontrar todas tus prendas favoritas, desde básicas que usas todos los días, hasta los buzos para tu rutina de 'workout'.
+                    
+                    Empezamos en 2013 seguros de que podiamos crear productos con calidad de exportacion 'Made in Bolivia', y ahora podemos ver como icetees se convierte en una marca sostenible,manteniendo prácticas éticas, con un modelo hecho a pedido en nuestro taller basado en el corazón de Santa Cruz de la Sierra
+                    
+                    Somos parte del futuro en la industria de la moda, donde todo lo que hacemos está pensado para nuestros clientes. Creamos los productos que quisieras que existan. Creemos en el diseño consciente y la produccion responsable. Pero sobre todo, creemos que la moda es inclusiva, por eso nuestras piezas son creadas para todas las personas, sin distinción de raza, género o religión.
+                    
+                    Encantados de conocerte!
+                <div class="imagen2">
+                    <img src="img/niño2.jpg" class="imglate" alt="">
+                </div>
+            </aside>
+        </section>
+
+       
+        
+        
+
+    </div>
+    
+</body>
+</html>
